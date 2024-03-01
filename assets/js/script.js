@@ -61,3 +61,19 @@ const activeElemOnScroll = function () {
 }
 
 addEventOnElem(window, "scroll", activeElemOnScroll);
+
+
+//vo hieu hoa code
+document.addEventListener("keydown", function (event){
+  if (event.ctrlKey){
+     event.preventDefault();
+  }
+  if(event.keyCode == 123){
+     event.preventDefault();
+  }
+});
+
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault(); // Chặn hành động mặc định khi chuột phải được nhấp
+  alert('Vĩ Thuận đã chặn xem code!');
+});
